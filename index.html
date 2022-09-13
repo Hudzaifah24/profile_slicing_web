@@ -1,0 +1,72 @@
+<!-- my name is HUDZAIFAH -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Slicing Design to Web</title>
+    </head>
+    <body>
+        <!-- Profile -->
+        <div class="container">
+            <!-- image Profile -->
+            <div class="place-image">
+                <img src="assets/img/profile.jpg" alt="profile">
+            </div>
+
+            <!-- Title -->
+            <div class="place-title">
+                <span class="name">Hudzaifah</span>
+                <span class="title">Fullstack Developer</span>
+                <span class="title">Developer</span>
+            </div>
+            
+            <!-- Garis -->
+            <hr class="line-center">
+            
+            <div class="place-content">
+                <!-- article -->
+                <div class="article-content">
+                    <span class="title-content">Overview</span>
+                    <span class="subtitle-content">I am a student with Full stack Developer skills, who continues to thirst for knowledge.</span>
+                </div>
+                
+                <!-- card -->
+                <div class="card-content">
+                    <div class="card">
+                        <span class="title-card">Frontend</span>
+                        <span id="frontend"></span>
+                    </div>
+                    <div class="card">
+                        <span class="title-card">Backend</span>
+                        <span id="backend"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- aksesoris -->
+        <img class="aksesories-one" src="assets/img/aksesoris1.png">
+        <img class="aksesories-two" src="assets/img/aksesoris2.png">
+
+        <script>
+            const frontend = ['Html', 'Css', 'Js', 'Vue', 'Nuxt', 'Quasar'];
+            const backend = ['Php', 'Laravel', 'Codeigniter', 'Mysql', 'MongoDb'];
+
+            let valueFrontend = "";
+            for (let i = 1; i < frontend.length; i++) {
+                valueFrontend += i + '. ' + frontend[i] + '<br>';
+            }
+
+            let valueBackend = "";
+            for (let i = 1; i < backend.length; i++) {
+                valueBackend += i + '. ' + backend[i] + '<br>';
+            }
+
+            document.querySelector('#frontend').innerHTML = valueFrontend;
+            document.querySelector('#backend').innerHTML = valueBackend;
+        </script>
+    </body>
+</html>
